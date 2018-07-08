@@ -1,0 +1,199 @@
+<html>
+<head>
+<title>
+	 TIME SCHEDULER
+</title>
+<link rel="shortcut icon" href="clock.png" type="image/png">
+<style>
+     .main{
+		margin-top:0%;
+		float:left;
+		width:44%;
+		}
+	.heading{
+		margin-top:0%;
+		width:100%;
+		height:30%;
+		background-color:#76b852;
+		padding-top:1%;
+		border-radius:10%;
+		}
+	
+	.column{
+		float:left;
+		height:69%;
+		margin-top:1%;
+		}
+	#bar{
+		width:5%;
+		height:69%;
+		background-color:lightgrey;
+		}
+	#func{
+		width:95%;
+		background-color:white;
+		}
+	#frame{
+		margin-left:1%;
+		background-color:pink;
+		width:55%;
+		height:100%;
+		}
+	
+	.timer{
+		float:left;
+		margin-top:5%;
+		height:75%;
+		}
+	#times{
+		width:60%;
+		height:60%;
+		background-color:white;
+		margin-left:5%;
+		
+		
+	}
+	#buttons{
+		width:25%;
+		background-color:grey;
+		height:10%;
+		margin-left:5%;
+		text-align:center;
+		border-radius:5%;
+		
+		}
+	#searchbox{
+		background-color:grey;
+		width:80%;
+		height:10%;
+		margin-left:10%;
+		margin-top:10%;
+		}
+	input[type=text]{
+		margin-top:2%;
+		margin-left:10%;
+		width:50%;
+		
+		}
+	.unit_value{
+		width:45%;
+		height:50%;
+		background-color: white; 
+		float:left;
+		color: black;
+		text-align:center;
+		font-size:700%;
+		line-height:150px;
+		
+		}
+	#colon{
+		width:10%;
+		height:50%;
+		background-color:white;
+		color:green;
+		}
+	.unit_name{
+		width:45%;
+		height:10%;
+		background-color:white;
+		float:left;
+		color:black;
+		text-align:center;
+		margin-bottom:5%;
+		}
+	#blank{
+		width:10%;
+		height:10%;
+		background-color:white;
+		}
+	.subjfunc{
+		float:left;
+		height:30%;
+		
+		}
+	#subject{
+		width:70%;
+		text-align:center;
+		font-size:150%;
+		background-color:white;
+		padding-top:2%;
+		}
+	#pause{
+		width:30%;
+		background-color:white;
+		}
+		
+	#keys{
+		width:23%;
+		background-color:grey;
+		height:10%;
+		
+		margin-right:1%;
+		margin-top:3%;
+		text-align:center;
+		border-radius:5%;
+		
+		}
+	.pagename{
+		float:right;
+		background-color:#76b852;
+		width:70%;
+		height:100%;
+		margin-top:-0.5%;
+		margin-right:5%;
+		
+		}
+	#intro{
+		font-size:300%;
+		color:white;
+		text-align: center;
+		
+		}
+  </style>
+</head>
+
+<body>
+ 
+ <div class="main">
+   <div class="heading">
+	
+	 <div class="pagename" id="intro"> STUDY<br>SCHEDULER </div>
+	 <div class="pagename" id="keys"> <span>Logout</span> </div>
+	 <a href="data.html"> <div class="pagename" id="keys">  Settings </div> </a>
+	 <div class="pagename" id="keys"> Analysis </div>
+	 <div class="pagename" id="keys"> Rules </div>
+   </div>
+   
+   
+   <div class="column" id="bar">
+      <div id="bar" style="background-color:green; width:100%; height:10px;">
+	  </div>
+   </div>
+   <div class="column" id="func">
+	 <div class="timer" id="times">
+		<div class="unit_value" id="minutes">00</div>
+		<div class="unit_value" id="colon">:</div>
+		<div class="unit_value" id="second">00</div>
+		<div class="unit_name" id="minutes">MINUTES</div>
+		<div class="unit_name" id="blank"></div>
+		<div class="unit_name" >SECONDS</div>
+		
+		<div class="subjfunc" id="subject"> TIME Assigned To:<br> <span id="subjectname">STUDY </span></div>
+		<div class="subjfunc" id="pause"><img src="play.png" style="margin-left: 20%; margin-top:5%;"></div>
+	 </div>
+	 
+	 
+	<div class="timer" id="buttons" onclick = "document.getElementById('ifrm').src = 'http://www.udacity.com' "><p id="buttnames">SITE I</p></div>
+	<div class="timer" id="buttons" onclick = "document.getElementById('ifrm').src = 'http://www.udacity.com' "><p id="buttnames">SITE II</p></div>
+	<div class="timer" id="buttons" onclick = "document.getElementById('ifrm').src = 'http://www.wikipedia.org' "><p id="buttnames">WIKIPEDIA</p></div>
+	<div class="timer" id="buttons" onclick = "document.getElementById('ifrm').src = 'http://www.udacity.com' "><p id="buttnames">UDACITY</p></div>
+	<div class="timer" id="searchbox">
+		<input type="text" placeholder="Destination" width="100px"></input>
+		<input type="button" value="Go" style="width:30%;"></input>
+	</div>
+   </div>
+ </div>
+ <div class="main" id="frame">
+	<iframe  id="ifrm" src="http://www.wikipedia.org" height="100%" width="100%" scrolling="yes"></iframe>
+ </div>
+</body>
